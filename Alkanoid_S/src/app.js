@@ -62,7 +62,7 @@ var HelloWorldLayer = cc.Layer.extend({
 					this.ball.speedY = 6*Math.sin(alpha);
 				}
 			}
-			if(ballTop<box_g_Bottom && ballTop + this.ball.speedY > box_g_Bottom){
+			if(ballTop<box_g_Bottom && ballTop + this.ball.speedY > box_g_Bottom){//초록 박스의 아랫부분 충돌처리 
 				var xOnBox = this.ball.x+(box_g_Bottom+this.ball.getBoundingBox().height/2-this.ball.y)*this.ball.speedX/(this.ball.speedY);
 				var boxLeft = this.box.x-this.box.getBoundingBox().width/2;
 				var boxRight = this.box.x+this.box.getBoundingBox().width/2;
